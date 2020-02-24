@@ -6,8 +6,10 @@ var app = express();
 
 // respond with "hello world" when a GET request is made to the homepage
 app.get("/", function(req, res) {
-  res.send("hello world");
+  res.send("hello world 1");
 });
+
+app.use(require("./routes/index"));
 
 app.listen(process.env.PORT || 4000);
 console.log("server running...");
